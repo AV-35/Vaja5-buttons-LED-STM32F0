@@ -112,23 +112,118 @@ int main(void)
 
 
 
-	   case()
-
-
 	    if (T1 == 1) {
 	    	for ( int var = 0;  var <= 8; ++ var) {
 	    		HAL_GPIO_TogglePin(GPIOC, GPIO_PIN_9);
 	    		HAL_Delay(500);
+	    	}
+	    }
 
 
+	    else if (T2 == 1) {
+	   	    	for ( int var = 0;  var <= 8; ++ var) {
+	   	    		HAL_GPIO_TogglePin(GPIOC, GPIO_PIN_8);
+	   	    		HAL_Delay(500);
 
-
-			}
+	   	     }
 
 	    }
+
+
+
+	    else if (T3 == 1){
+				for ( int var = 0;  var <= 4; ++ var) {
+						HAL_GPIO_TogglePin(GPIOC, GPIO_PIN_9);
+						HAL_Delay(1000);
+						HAL_GPIO_TogglePin(GPIOC, GPIO_PIN_9);
+						HAL_GPIO_TogglePin(GPIOC, GPIO_PIN_8);
+						HAL_Delay(1000);
+						HAL_GPIO_TogglePin(GPIOC, GPIO_PIN_8);
+
+				}
+
+
+
+
+	    }
+
+
+	    else if (T4 == 1){
+					HAL_GPIO_TogglePin(GPIOC, GPIO_PIN_8);
+					HAL_Delay(1000);
+					HAL_GPIO_TogglePin(GPIOC, GPIO_PIN_8);
+						for ( int var = 0;  var <= 4; ++ var) {
+												HAL_GPIO_TogglePin(GPIOC, GPIO_PIN_9);
+												HAL_Delay(300);
+
+
+
+						}
+						for ( int var = 0;  var <= 4; ++ var) {
+												HAL_GPIO_TogglePin(GPIOC, GPIO_PIN_9);
+												HAL_Delay(1000);
+
+
+
+										}
+						for ( int var = 0;  var <= 6; ++ var) {
+												HAL_GPIO_TogglePin(GPIOC, GPIO_PIN_9);
+												HAL_Delay(300);
+
+
+
+										}
+						HAL_GPIO_TogglePin(GPIOC, GPIO_PIN_9);
+						HAL_GPIO_TogglePin(GPIOC, GPIO_PIN_8);
+						HAL_Delay(1000);
+						HAL_GPIO_TogglePin(GPIOC, GPIO_PIN_8);
+
+
+
+
+
+	 	    }
+
+
+	    else if (T5 == 1){
+	    	int delay = 1000;
+	    	for ( int var = 0;  var <= 500; ++ var) {
+				HAL_GPIO_TogglePin(GPIOC, GPIO_PIN_9);
+				HAL_Delay(delay);
+				delay = delay /2;
+
+
+
+	    	}
+
+	    }
+
+	    else if (T6 == 1){
+		    	int delay = 1;
+		    	for ( int var = 0;  var <= 500; ++ var) {
+		    		HAL_GPIO_TogglePin(GPIOC, GPIO_PIN_9);
+					HAL_Delay(delay);
+					HAL_GPIO_TogglePin(GPIOC, GPIO_PIN_9);
+					HAL_GPIO_TogglePin(GPIOC, GPIO_PIN_8);
+					HAL_Delay(delay);
+					HAL_GPIO_TogglePin(GPIOC, GPIO_PIN_8);
+					delay = delay*2;
+
+
+		    	}
+
+		    }
+
+
+
 	    else{
-	    HAL_GPIO_WritePin(GPIOC, GPIO_PIN_9,GPIO_PIN_RESET);
-	    }
+	 	    HAL_GPIO_WritePin(GPIOC, GPIO_PIN_9,GPIO_PIN_RESET);
+	 	    HAL_GPIO_WritePin(GPIOC, GPIO_PIN_8,GPIO_PIN_RESET);
+
+	 	    }
+
+
+
   }
   /* USER CODE END 3 */
 }
