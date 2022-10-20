@@ -191,6 +191,9 @@ int main(void)
 				HAL_GPIO_TogglePin(GPIOC, GPIO_PIN_9);
 				HAL_Delay(delay);
 				delay = delay /2;
+				if (delay <= 2){
+					break;
+				}
 
 
 
@@ -208,6 +211,9 @@ int main(void)
 					HAL_Delay(delay);
 					HAL_GPIO_TogglePin(GPIOC, GPIO_PIN_8);
 					delay = delay*2;
+					if (delay >= 1000){
+						break;
+					}
 
 
 		    	}
